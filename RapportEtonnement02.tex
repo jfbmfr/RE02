@@ -1,0 +1,96 @@
+%--------------------------------------------------------------------------%
+% Entête
+%--------------------------------------------------------------------------%
+%Type du document
+\documentclass[french,11pt,a4paper]{article}
+
+%Choix de la fonte
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern} 
+%\usepackage{aeguill}
+\usepackage{helvet}
+
+%La langue
+\usepackage{babel}
+\usepackage[babel=true]{csquotes}
+
+%Les paragrpahes
+\usepackage[skip=10pt plus1pt, indent=20pt ]{parskip}
+
+%Le titre
+\title{Rapport d'étonnement bis}
+\author{JF Bonnet-Michon}
+
+%--------------------------------------------------------------------------%
+% Le document
+%--------------------------------------------------------------------------%
+
+\begin{document}
+	\maketitle
+
+	Ce document traduit un nombre d'interrogations ne trouvant pas de réponse ainsi que certaines craintes.  Il ne fait que traduire le ressenti d'un esprit naturellement anxieux. Il est sûrement outrancier, espérons qu'il se trompe souvent. Il n'engage que son auteur à l’exception peut être de la réflexion en toute fin.
+	\par
+	
+	\section*{Les nouveaux alchimistes, mais c'est une vieille histoire}
+	Architecture en médaillon, l'effet JO peut-être. \enquote{Bronze}, \enquote{Silver}, \enquote{Gold}\dots{} Si avec \enquote{Kafka}, que nous évoquerons plus loin dans ce document, nous ajoutons une couche de plomb, nous voilà devenus des alchimistes devant notre athanor. Dans les années~90, nous parlions d'ODS, d'entrepôt et de magasins\dots{} Rien de nouveau sous le soleil donc. En regard, pour ce qui est de l'abandon du \enquote{Datavault}, pourquoi pas tant que ce n'est pas dire maintenant \enquote{noir} quand nous disions \enquote{blanc}  et \enquote{blanc} quand nous disions \enquote{noir}.
+	\par 
+
+	Opter pour une vision dite \enquote{data} pourrait faire sens. Une logique en \enquote{Streams} est des plus adaptées quand il s'agit de produire des magasins de données\dots{} couche \enquote{Gold} pardon. Mais plus en amont, la donnée n'a pas à être spécialisée à outrance au sens des besoins exprimés par les métiers. Dans la couche \enquote{Silver}, ces besoins n'y apparaissent pas encore. Il s'agit plutôt de comprendre les principaux concepts et les liens entre eux  au travers des modèles de données. Une réflexion semble avoir été menée en ce sens, des prémices écrites, mais sans suite\dots{} 	
+	\par 
+	
+	Pour poursuivre l'appréhension de la donnée, l'exploit consistant à lire les méta-données d'un SGBD pour les déverser dans un outil documentant les modèles reste relatif. Se contenter de cela, n'est-ce pas arriver après la bataille? Le modèle précède et ne doit pas être \enquote{constaté}. En outre, ces outils  paraissent trop liés au modèle physique. Ce dernier est souvent trompeur. Si malgré tout, on tente d'ajouter une couche fonctionnelle, l'exercice ressemble beaucoup à une liste à la Prévert. Ces outils ne tracent pas de véritable liens (associations) entre les notions fonctionnelles et les matérialisent encore moins, tout au plus au détour d'une phrase si son auteur s'en est donné la peine. Le désir répété de faire des économies de \enquote{bouts de chandelle} sur un véritable outil de modélisation, passant par le seul qui vaille, le modèle conceptuel, n'est pas de bonne augure. 
+	\par
+	
+	\section*{Nous faisons tous du décisionnel}
+	Dès que l'on bricole un fichier Excel, on fait du décisionnel. On dénormalise, on chahute la donnée pour l'amener sous la forme d'un grand tableau, tableau depuis lequel elle sera facilement agrégée, filtrée, présentée.
+	\par
+
+	La particularité du décisionnel est qu'il ne se décline pas en processus. Il n'y a pas de \enquote{process} en décisionnel! Tout prévoir est illusoire. Calculer 80\% des mesures et apporter les axes suffisants pour les restituer relève déjà d'un bel exploit. Aussi, désigner des personnes ayant la fibre pour tordre la donnée et leur confier des travaux pour compléter ce qui a déjà été mis en place ou en complément ou dans un but d'exploration relève du bon sens. Dans un autre siècle, au temps des infocentres, il n'était pas rare de voir des collaborateurs en dehors de la DSI s'emparer des commandes SAS ou Nomad pour faire au profit de leurs collègues des tableaux de bord à façon. Nomad, tu avais trente ans d'avance!
+	\par 
+
+	La question est plutôt ici une question d'outillage. SAS ou Nomad offraient chacun un L4G riche et puissant. SQL a de son côté su évoluer depuis sa norme SQL:1999, avec les \enquote{fonctions de fenêtrage} notamment. Mais qu'en est-il de Power~BI? Le DAX? c'est plus pour interroger un modèle sémantique existant. Un langage intéressant d'ailleurs. Des populations comme celle des contrôleurs de gestion semblent bien plus à l'aise avec le DAX qu'avec le SQL \dots{} tant que le modèle relève d'une modélisation de type décisionnelle.
+	\par 
+
+	Ce n'est pas DAX le sujet ici. Mais avant. Plus loin en amont. Amont qui ne repose pas sur un modèle issu des \enquote{torsions} de données. Mais alors, avec quoi tordre une donnée à la troisième forme normale? Le langage M? puisque c'est de lui qu'il s'agit ici, ce langage fonctionnel déroutant et lent. En sommes-nous sûrs? Ne serait-ce pas d'ailleurs l'explication du chargement de fichiers sur la plateforme par certains métiers? fichiers issus de traitements, de transformations faites via un langage moins exotique que le M? en douce? Mais comment faire autrement?
+	\par 
+
+	À cela s'ajoute la question de l'outil de développement. En local sur le client lourd? S'il y a des Giga de données à faire transiter? La plateforme semble de plus en plus pousser à travailler sur le client léger. Un \enquote{DataFlaw}? du \enquote{DirectQuery} pour éviter de répliquer mais perdre une partie de la puissance de DAX? Oui, non? Il faut avouer que rien n'est encore clair.
+	\par	
+	
+	\section*{Que de transactions!}
+	Mac Mahon serait sûrement fier qu'on reprenne son étonnement face aux inondations qui avaient touché la Garonne : \enquote{Que d'eau\dots{} que d'eau\dots{}}. \enquote{Que de transactions\dots{} que de transactions\dots{}}.
+	\par
+	
+	Si tout le monde fait du décisionnel, une bonne part du raisonnement semble pourtant transactionnel. Nous faisons ici référence à l'appel parfois un peu trop systématique à l'outil \enquote{Kafka}. Non pas que l'outil soit inintéressant. S'il a ses avantages dans une logique de micro-service, appliqué tel que au décisionnel, il pourrait présenter un certain nombre de risques. 
+	\par 
+
+	La synchronisation déjà. Pour le biométhane par exemple, l'alpha et l'oméga semblent être \enquote{Kafka} quand bien même les données à gérer sont faibles en volume. \enquote{Nous avons un spécialiste Kafka!}. Grand bien lui en fasse. Mais il ne faudra pas oublier de développer toutes les \enquote{sondes} nécessaires pour déclencher les messages en espérant ne pas en oublier... sinon gare aux déphasages! Cela doit expliquer certains coûts\dots{}
+	\par		
+	
+	Une vision trop marquée par une approche de type micro-service ensuite. Trop transactionnelle. Très bien  d'envoyer un message au système pilotant une chaîne de production de produits depuis le système gérant les commandes. Très bien de dire que l'on a posé tel compteur et qu'il fait maintenant référence à tel PCE. Très bien d'indiquer un déménagement. Mais est-ce ce qui intéresse le décisionnel? Lui ne fait que constater la résultante en regardant l'état du système en fin de journée par exemple. Une date suffira à tracer l'événement. Sans compter les saisies successives en cas d'erreur ou d'hésitations\dots{} Et qu'en est-il qui plus est de messages qui tordent parfois la logique du modèle de données? La CJA? au PCE? pas du tout! c'est au niveau du PDLA, l'objet qui dure le temps d'un abonnement et qui porte les données contractuelles ainsi que les documents de calcul de facturation. Il n'est pas prévu de transmettre le PDLA? dommage non? À ce propos, comment voit-on qu'un abonnement commence? qu'il se termine? cette date là? peut-être? pas sûr\dots{}
+	\par 
+	
+	Enfin, n'est-il pas contre-productif de faire appel à cette approche par messages pour constituer des objets d'échange sans risquer de devoir, dans le décisionnel, reproduire une logique transactionnelle? Lors d'une présentation de ce que pourrait être la mise en place d'objets d'échange, il a été impossible de savoir si l'approche serait d'avoir un stock à disposition ou alors, de recevoir des messages pour mettre à jour les données (ajout, modification ou suppression qu'elle soit logique ou pas). Transactionnel sors de ce corps!
+	\par 
+	
+	En revanche, s'il s'agit d'envoyer des données de type \enquote{IOT}, l'outil peut s'avérer judicieux, pas tant pour faire du temps réel, ce dont le décisionnel se moque souvent, mais dans la logique même de la mise à disposition d'une donnée qui n'évolue pas.
+	
+	\section*{Iconoclaste! Vade retro Satanas!}	
+	Pendant la montée en puissance d'outils comme Qlik~View, une expression avait retenu notre attention \enquote{Bi~Bling-Bling}.
+	\par
+
+	Power~Bi connaît un important succès. Pour sa \enquote{joliesse} probablement et la facilité de mise en œuvre. N'est-ce pas aussi qu'il donne une grande liberté pour capturer les données et réaliser assez simplement des tableaux de bord attrayants dans un contexte bureautique? Liberté, sens apporté à ce que l'on fait, satisfaction de transformer, de créer souvent avec des outils parallèles\dots{}
+	\par 
+
+	Attention également à l'effet tunnel lié au développements tournant sur la mise en page. Les goûts et les couleurs\dots{} Non pas qu'il faille négliger la difficulté de concevoir un tableau de bord, mais son contenu ne relève pas de la seule \enquote{joliesse} justement. Ne pas oublier non plus l'accès à la donnée élémentaire, sous forme tout bêtement tabulaire. L'accès au détail est assez lourd dans Power~Bi, qui ne semble pas adopter une approche de requête comme le propose d'autres L4G. À observer pour s'assurer qu'il ne manque pas une brique dans les usages, brique de type BO ou Microstrategy. Notons, et ce n'est  pas la moindre des remarques, que la présentation de la couche sémantique dans Power~Bi est très rudimentaire : les structures sont présentées dans l'ordre alphabétique bien loin de ce qu'il était possible de faire dans BO ou Cognos pour ne retenir qu'eux. C'est bien dommage. 
+	\par			
+		
+	\section*{De la série du bac}
+	Il est de petites contrariétés de l'adolescence qui ressurgissent parfois plus tard sous une autre forme tant elles ont laissé de traces. Elles se réveillent à l'occasion d'un événement ou d'interrogations soudaines. Une bête série du baccalauréat par exemple\dots{} De cette époque où les secondes n'étaient pas indifférenciées, où il fallait sortir parmi les premiers pour espérer rejoindre l'unique 1\iere{}~C mise en face des quatre 2\ieme{}~C. Et il arrivait parfois que cette première épreuve passée, vit une chute mémorable vers une Terminale~D. Il s'agissait bien d'un chute : la série~C étant vue comme royale, la~D quelque peu médiocre.
+	\par 
+
+	En regardant la situation de BIM au sein de Data~Fabric, nous ne sommes pas loin de retrouver cette césure qui existait entre les D et les C. Les gueux et les dieux\dots{} À telle enseigne, que certains se posent la question du devenir de BIM, de sa future place dans l'organisation, ce qu'on attend vraiment d'elle.
+	\par
+		 
+\end{document}
